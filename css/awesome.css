@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+
+html,body{
+    text-align: center;
+    padding:30px 0;
+    color: #212121;
+}
+h1,p{
+    color: #263238;
+}
+
+.single-question {
+    border: 1px solid #eee;
+    box-shadow: 2px 2px 9px rgba(0,0,0,0.2);
+    margin:25px;
+    border-radius: 9px;
+    padding:10px;
+
+}
+
+.single-question h1 {
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px 2px #888888;
+}
+
+.single-question .category{
+    padding:5px 10px;
+    border-radius: 3px;
+    background-color:rgba(72, 52, 212,1.0);
+    border:1px solid rgba(104, 109, 224,1);
+    display: table;
+    margin:auto;
+    color:#fff;
+    font-weight:800;
+    margin-bottom:20px
+}
+
+.single-question label{
+    background-color:rgba(235, 77, 75,1.0);
+    color:#fff;
+    min-width:60px;
+    padding:5px;
+    margin:3px
+}
+
+.single-question input{
+    display:none
+}
+
+
+input[type="radio"]:checked + label {
+    background-color:#000
+}
+
