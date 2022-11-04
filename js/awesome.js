@@ -8,9 +8,15 @@ if (js === "beginning"){
 let doc = document.getElementsByTagName('p');
 const para = document.getElementById('score-output');
 const button = document.getElementById("btn-score")
+const buttonSaveProgress = document.getElementById("save-progress")
+const buttonRedirectHome = document.getElementById("redirect-home")
 
 
-const link = 'https://opentdb.com/api.php?amount=10';
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+const link = urlParams.get('quiz');
+console.log(link)
 const questionTag = document.getElementsByClassName('question');
 
 
@@ -22,6 +28,11 @@ async function fetchData(url) {
     } catch (error) {
         console.error(error);
     }
+}
+
+function shuffle(array) {
+    const shuffled = array.sort(() => Math.random() - 0.5);
+    return shuffled
 }
 
 function checkIfSelected(){
@@ -103,9 +114,10 @@ function createQuestionTags(question,index){
         return escapeHtml(el)
     })
 
-
-    const answers = [...question.incorrect_answers, escapeHtml(question.correct_answer)];
+    const tempAnswers = [...question.incorrect_answers, escapeHtml(question.correct_answer)];
+    const answers = shuffle(tempAnswers);
     // console.log(answers)
+
     let currIndex = index
     createAnswersInputs(answers,HTMLElement,currIndex)
     questionTag[0].appendChild(HTMLElement)
@@ -132,9 +144,9 @@ function createAnswersInputs(answers,HTMLElement,currIndex) {
 }
 
 async function processingFunction(){                      // change to async
-    const url = 'https://opentdb.com/api.php?amount=10&type=multiple'
+    const url = link + "&amount=10"
     const database_data = await fetchData(url);
-    // console.log(database_data)
+    //console.log(database_data)
 
     // doc[0].innerHTML = database_data.results.category;
     database_data.results.forEach((element, index)=>{
@@ -165,7 +177,6 @@ async function processingFunction(){                      // change to async
         //     console.log(item)
         // });
     })
-    console.log(correct_answers)
 
     button.addEventListener("click", function(){
         correct_answers.forEach((e,i)=>{
@@ -176,20 +187,21 @@ async function processingFunction(){                      // change to async
         para.innerHTML = score
     })
 
+    buttonSaveProgress.addEventListener("click", function (){
+        window.location.href = window.location.hostname + "/upload.php";
+    })
+
+    buttonRedirectHome.addEventListener("click", function () {
+        window.location.href = window.location.hostname;
+    })
+
+
     return database_data.results
 }
 
 
 
 processingFunction()
-
-
-
-
-
-
-
-
 
 
 

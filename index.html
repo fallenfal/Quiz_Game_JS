@@ -6,51 +6,90 @@
     <title>JS homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link href="css/awesome.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fc8d2a7284.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
-<h1>Hello, world!</h1>
+<h1 class="fw-bold">Play the Quiz!</h1>
+<p class="small lh-1 fw-bold"> Choose a category and start playing the 10 questions quiz.</p>
 <div class="container">
     <div class="row">
-        <div class="question"></div>
-    </div>
-</div>
-
-
-
-
-
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btn-score">
-    Show Score!
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="score-output">
-                ...ss
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="quiz.html?quiz=https://opentdb.com/api.php?category=9" class="select-category"><i class="fa-solid fa-poo"></i> General Knowledge</a>
         </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="quiz.html?quiz=https://opentdb.com/api.php?category=10" class="select-category">Entertainment: Books</a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="quiz.html?quiz=https://opentdb.com/api.php?category=11" class="select-category" >Entertainment: Film</a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="quiz.html?quiz=https://opentdb.com/api.php?category=12" class="select-category">Entertainment: Music</a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="quiz.html?quiz=https://opentdb.com/api.php?category=13" class="select-category">Entertainment: Musicals & Theatres</a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="quiz.html?quiz=https://opentdb.com/api.php?category=14" class="select-category">Entertainment: Television</a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="quiz.html?quiz=https://opentdb.com/api.php?category=15" class="select-category">Entertainment: Video Games</a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="quiz.html?quiz=https://opentdb.com/api.php?category=16" class="select-category">Entertainment: Board Game</a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="quiz.html?quiz=https://opentdb.com/api.php?category=17" class="select-category">Science & Nature</a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="quiz.html?quiz=https://opentdb.com/api.php?category=18" class="select-category">Science: Computers</a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="quiz.html?quiz=https://opentdb.com/api.php?category=19" class="select-category">Science: Mathematics</a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="quiz.html?quiz=https://opentdb.com/api.php?category=20" class="select-category">Mythology</a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="quiz.html?quiz=https://opentdb.com/api.php?category=21" class="select-category">Sports</a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+                    <a href="quiz.html?quiz=https://opentdb.com/api.php?category=22" class="select-category">Geography</a>
+                </div>
+        <div class="col-md-4 col-sm-6">
+                    <a href="quiz.html?quiz=https://opentdb.com/api.php?category=23" class="select-category">History</a>
+                </div>
+        <div class="col-md-4 col-sm-6">
+                    <a href="quiz.html?quiz=https://opentdb.com/api.php?category=24" class="select-category">Politics</a>
+                </div>
+        <div class="col-md-4 col-sm-6">
+                    <a href="quiz.html?quiz=https://opentdb.com/api.php?category=25" class="select-category">Art</a>
+                </div>
+        <div class="col-md-4 col-sm-6">
+                    <a href="quiz.html?quiz=https://opentdb.com/api.php?category=26" class="select-category">Celebrities</a>
+                </div>
+        <div class="col-md-4 col-sm-6">
+                    <a href="quiz.html?quiz=https://opentdb.com/api.php?category=27" class="select-category">Animals</a>
+                </div>
+        <div class="col-md-4 col-sm-6">
+                    <a href="quiz.html?quiz=https://opentdb.com/api.php?category=28" class="select-category">Vehicles</a>
+                </div>
+        <div class="col-md-4 col-sm-6">
+                    <a href="quiz.html?quiz=https://opentdb.com/api.php?category=29" class="select-category">Entertainment: Comics</a>
+                </div>
+        <div class="col-md-4 col-sm-6">
+                    <a href="quiz.html?quiz=https://opentdb.com/api.php?category=30" class="select-category">Science: Gadgets</a>
+                </div>
+        <div class="col-md-4 col-sm-6">
+                    <a href="quiz.html?quiz=https://opentdb.com/api.php?category=31" class="select-category">Entertainment: Japanese Anime & Manga</a>
+                </div>
+        <div class="col-md-4 col-sm-6">
+                    <a href="quiz.html?quiz=https://opentdb.com/api.php?category=32" class="select-category">Entertainment: Cartoon & Animations</a>
+                </div>
+
+
     </div>
 </div>
-<p id="output"></p>
-<script>
-
-</script>
-
-<p id="text_output"></p>
-
 
 
 
